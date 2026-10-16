@@ -1,0 +1,36 @@
+# ============================================================
+# Exemplo de variaveis de ambiente (.env)
+# Copie este arquivo para ".env" e preencha os valores reais.
+#   cp env_exemplo.txt .env
+# Nunca versione o .env real (adicione-o ao .gitignore).
+# ============================================================
+
+# ------------------------------------------------------------
+# OBRIGATORIO - pagamentos/views.py linha 21
+# Usado em: sdk = mercadopago.SDK(os.getenv("MP_ACCESS_TOKEN"))
+# ------------------------------------------------------------
+# Token de acesso do Mercado Pago.
+# Teste:     pegue em https://www.mercadopago.com.br/developers -> Suas aplicacoes -> Credenciais de teste
+#            comeca com "TEST-"
+# Producao:  credenciais de producao (comeca com "APP_USR-")
+MP_ACCESS_TOKEN=SEU_ACCESS_TOKEN_AQUI
+
+
+# ------------------------------------------------------------
+# OPCIONAL - lidas pelo config/settings.py
+# Se nao definir, o settings.py usa os valores padrao de
+# desenvolvimento (abaixo entre parenteses).
+# ------------------------------------------------------------
+
+# Chave secreta do Django (padrao: chave insegura de dev)
+# Gere uma nova com:
+#   python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+SECRET_KEY=coloque-uma-chave-secreta-aqui
+
+# Modo de depuracao (padrao: True)
+# Use True em desenvolvimento, False em producao.
+DEBUG=True
+
+# Hosts permitidos (padrao: localhost,127.0.0.1)
+# Exemplo: localhost,127.0.0.1,meusite.com
+ALLOWED_HOSTS=localhost,127.0.0.1
